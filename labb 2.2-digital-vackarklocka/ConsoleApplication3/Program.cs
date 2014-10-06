@@ -56,35 +56,35 @@ namespace ConsoleApplication3
             {
                 test6.Hour = 45;
             }
-            catch (ArgumentException error)
+            catch (ArgumentException failure)
             {
-                ViewErrorMessage(error.Message);
+                ViewErrorMessage(failure.Message);
             }
 
             try
             {
                 test6.Minute = 70;
             }
-            catch (ArgumentException error)
+            catch (ArgumentException failure)
             {
-                ViewErrorMessage(error.Message);
+                ViewErrorMessage(failure.Message);
             }
 
             try
             {
                 test6.AlarmHour = 42;
             }
-            catch (ArgumentException error)
+            catch (ArgumentException failure)
             {
-                ViewErrorMessage(error.Message);
+                ViewErrorMessage(failure.Message);
             }
             try
             {
                 test6.AlarmMinute = 70;
             }
-            catch (ArgumentException error)
+            catch (ArgumentException failure)
             {
-                ViewErrorMessage(error.Message);
+                ViewErrorMessage(failure.Message);
             }
                 
             //Test 7
@@ -93,17 +93,17 @@ namespace ConsoleApplication3
             {
                 AlarmClock test7 = new AlarmClock(42, 0);
             }
-            catch (ArgumentException error)
+            catch (ArgumentException failure)
             {
-                ViewErrorMessage(error.Message);
+                ViewErrorMessage(failure.Message);
             }
             try
             {
                 AlarmClock test7 = new AlarmClock(0, 0, 42, 0);
             }
-            catch (ArgumentException error)
+            catch (ArgumentException failure)
             {
-                ViewErrorMessage(error.Message);
+                ViewErrorMessage(failure.Message);
             }
         }
 
