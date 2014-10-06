@@ -116,11 +116,13 @@ namespace ConsoleApplication3
                 {
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write("♫");
                     Console.WriteLine(ac.ToString() + "Tjut tjut tjut!");
                 }
                 else
                 {
                     Console.ResetColor();
+                    Console.Write(" ");
                     Console.WriteLine(ac.ToString());
                 }
             }
