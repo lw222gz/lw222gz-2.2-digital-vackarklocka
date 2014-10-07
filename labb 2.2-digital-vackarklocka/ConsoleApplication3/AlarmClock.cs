@@ -115,27 +115,15 @@ namespace ConsoleApplication3
             StringBuilder Display = new StringBuilder();
 
 
-            Display.AppendFormat("{0,5}:", _hour);
+            Display.AppendFormat("{0,5}:0{1} <{2}:0{3}>", _hour, _minute, _alarmHour, _alarmMinute);
 
-            if (_minute < 10)
+            if (_minute >= 10)
             {
-                Display.AppendFormat("0{0}", _minute);
+                Display.Remove(6, 1);
             }
-            else
+            if (_alarmMinute >= 10)
             {
-                Display.AppendFormat("{0}", _minute);
-            }
-
-
-            Display.AppendFormat(" <{0}:", _alarmHour);
-
-            if (_alarmMinute < 10)
-            {
-                Display.AppendFormat("0{0}>", _alarmMinute);
-            }
-            else
-            {
-                Display.AppendFormat("{0}>", _alarmMinute);
+                Display.Remove(12, 1);
             }
 
             return Display.ToString();
