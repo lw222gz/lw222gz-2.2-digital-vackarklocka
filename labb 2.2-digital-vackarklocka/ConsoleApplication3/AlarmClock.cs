@@ -86,42 +86,42 @@ namespace ConsoleApplication3
         //metoderna
         public bool TickTock()
         {
-            ++_minute;
 
-            if (_minute > 59)
+            if (Minute < 59)
             {
-                ++_hour;
-                _minute = 0;
+                ++Minute;
             }
-
-            if (_hour > 23)
+            else
             {
-                _hour = 0;
+                Minute = 0;
+                if (Hour < 23)
+                {
+                    ++Hour;
+                }
+                else
+                {
+                    Hour = 0;
+                }
             }
-
-            if (_hour == _alarmHour && _minute == _alarmMinute)
-            {
-                return true;
-            }
-            
-            return false;            
+            return AlarmHour == Hour && AlarmMinute == Minute;                                
             // metod som anropas för at få klockan gå en minut, ska retunera true om den nya tiden översstämmer med alarmtiden annars ska den retunera false.
             // metoden ansvarar för att öka minuternas värde med 1. 
         }
 
-        public string ToString()
+        public override string ToString()
         {
 
             StringBuilder Display = new StringBuilder();
 
 
-            Display.AppendFormat("{0,5}:0{1} <{2}:0{3}>", _hour, _minute, _alarmHour, _alarmMinute);
+            Display.AppendFormat("{0,5}:0{1} <{2}:0{3}>", Hour, Minute, AlarmHour, AlarmMinute);
 
-            if (_minute >= 10)
+            if (Minute >= 10)
             {
                 Display.Remove(6, 1);
             }
-            if (_alarmMinute >= 10)
+
+            if (AlarmMinute >= 10)
             {
                 Display.Remove(12, 1);
             }

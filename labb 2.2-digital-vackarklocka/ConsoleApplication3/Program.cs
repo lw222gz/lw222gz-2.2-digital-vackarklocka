@@ -12,21 +12,21 @@ namespace ConsoleApplication3
         {
             //Test 1
             AlarmClock test1 = new AlarmClock();
-            ViewTestHeader("Test 1: test utav standardkonstruktorn.\n");
+            ViewTestHeader("Test 1: Test utav standardkonstruktorn.\n");
             Console.WriteLine(test1.ToString());
 
             //Test 2
             AlarmClock test2 = new AlarmClock(9, 42);
-            ViewTestHeader("Test 2: test utav konstruktorn med 2 parametrar.\n");
+            ViewTestHeader("Test 2: Test utav konstruktorn med 2 parametrar.\n");
             Console.WriteLine(test2.ToString());
              
             //Test 3
             AlarmClock test3 = new AlarmClock(13, 24, 7, 35);
-            ViewTestHeader("Test 3: test utav konstruktorn med 4 parametrar.\n");
+            ViewTestHeader("Test 3: Test utav konstruktorn med 4 parametrar.\n");
             Console.WriteLine(test3.ToString());
 
             //Test 4
-            AlarmClock test4 = new AlarmClock(23, 58, 7, 35);
+            AlarmClock test4 = new AlarmClock(23, 58, 7, 5);
             ViewTestHeader("Test 4: test utav TickTock Metoden så att klockan går 13 minuter.\n");
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.ForegroundColor = ConsoleColor.White;
@@ -49,7 +49,7 @@ namespace ConsoleApplication3
 
             //Test 6
             AlarmClock test6 = new AlarmClock();
-            ViewTestHeader("Test 6: test så att man inte kan ange för höga variabler.\n");
+            ViewTestHeader("Test 6: Test så att man inte kan ange för höga variabler.\n");
             
 
             try
@@ -88,7 +88,7 @@ namespace ConsoleApplication3
             }
                 
             //Test 7
-            ViewTestHeader("Test 7: test som kollar så att när tid/ alarmtid blir tilldelade felaktiga värden.\n");
+            ViewTestHeader("Test 7: Test som kollar så att när tid/ alarmtid blir tilldelade felaktiga värden.\n");
             try
             {
                 AlarmClock test7 = new AlarmClock(42, 0);
